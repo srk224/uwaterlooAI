@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        VERCEL_TOKEN = credentials('VERCEL_TOKEN') // Vercel Token stored in Jenkins Credentials
+        VERCEL_TOKEN = credentials('VERCEL_TOKEN') // Ensure this matches the ID in Jenkins Credentials
+        PYTHON_VERSION = '3.9'
     }
 
     stages {
@@ -16,21 +17,25 @@ pipeline {
         stage('Set up Python') {
             steps {
                 echo 'Setting up Python environment...'
+                // Install Python dependencies and activate virtual environment
                 sh """
-                python3 -m venv venv
-                source venv/bin/activate
+                python${PYTHON_VERSION} -m venv venv
+                . venv/bin/activate
+                pip install --upgrade pip
                 pip install -r requirements.txt
                 """
             }
         }
-
 
         stage('Deploy to Vercel') {
             steps {
                 echo 'Deploying to Vercel...'
                 withCredentials([string(credentialsId: 'VERCEL_TOKEN', variable: 'VERCEL_TOKEN')]) {
                     sh """
-                    vercel --token $VERCEL_TOKEN --prod --confirm --cwd .
+                    # Authenticate with Vercel using the provided token
+                    vercel login --token $VERCEL_TOKEN
+                    # Deploy the project to production
+                    vercel --prod --confirm --token $VERCEL_TOKEN
                     """
                 }
             }
@@ -39,14 +44,15 @@ pipeline {
 
     post {
         always {
-            echo 'Cleaning up...'
+            echo 'Cleaning up environment...'
             sh 'deactivate || true'
+            sh 'rm -rf venv'
         }
         success {
             echo 'Deployment to Vercel successful!'
         }
         failure {
-            echo 'Deployment failed.'
+            echo 'Deployment failed. Please check the logs for errors.'
         }
     }
 }
