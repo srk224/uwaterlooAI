@@ -25,7 +25,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 - [Jenkins](https://www.jenkins.io/)
 
 
-🎨 Frontend Preview
+### 🎨 Frontend Preview
 Here's a sneak peek of the user interface:
 
 <!-- Replace with actual screenshot URL -->
@@ -36,12 +36,14 @@ Here's a sneak peek of the user interface:
 
 The user interface is designed to be minimal and user-friendly, allowing you to interact with UwaterlooAI effortlessly.
 
-💡 How It Works
+### 💡 How It Works
+
 User Input: Enter your query (e.g., "What dining options are open today?") in the input field.
 Backend Processing: The Flask backend processes the request and queries the University of Waterloo API.
 AI-Powered Response: The response is processed using AI to extract and present the most relevant information.
 Frontend Display: The result is displayed neatly in the user interface, making it easy for users to understand.
-📂 Project Structure
+
+### 📂 Project Structure
 UwaterlooAI/
 ├── main.py               # Main Flask application
 ├── requirements.txt     # Python dependencies
@@ -49,26 +51,20 @@ UwaterlooAI/
 ├── Jenkinsfile          # Jenkins pipeline configuration
 ├── static/              # Static assets (HTML, CSS, JS)
 └── README.md            # This README file
-🛠️ Built With
+
+### 🛠️ Built With
 Python - Backend programming language
 Flask - Python web framework
 Vercel - Hosting and deployment platform for the frontend
 Jenkins - Continuous Integration and Deployment
 JavaScript/HTML/CSS - Frontend technologies for a sleek UI
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-📝 License
-Distributed under the MIT License. See LICENSE for more information.
-
-❤️ Acknowledgements
+### ❤️ Acknowledgements
 Vercel for hosting and deployment.
 University of Waterloo Open Data API for providing campus information.
 Jenkins for making CI/CD a breeze.
-📬 Contact
+
+# 📬 Contact
 Abdul Shahrukh Khan - as33khan@uwaterloo.ca
 
 Project Link: https://github.com/srk224/UwaterlooAI
