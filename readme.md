@@ -45,19 +45,19 @@ Frontend Display: The result is displayed neatly in the user interface, making i
 
 ### 📂 Project Structure
 UwaterlooAI/
-├── main.py               # Main Flask application
-├── requirements.txt     # Python dependencies
-├── vercel.json          # Vercel deployment configuration
-├── Jenkinsfile          # Jenkins pipeline configuration
-├── static/              # Static assets (HTML, CSS, JS)
-└── README.md            # This README file
+├── main.py               # Main Flask application \
+├── requirements.txt     # Python dependencies \
+├── vercel.json          # Vercel deployment configuration \
+├── Jenkinsfile          # Jenkins pipeline configuration \
+├── static/              # Static assets (HTML, CSS, JS) \ 
+└── README.md            # This README file \ 
 
 ### 🛠️ Built With
-Python - Backend programming language
-Flask - Python web framework
-Vercel - Hosting and deployment platform for the frontend
-Jenkins - Continuous Integration and Deployment
-JavaScript/HTML/CSS - Frontend technologies for a sleek UI
+Python - Backend programming language \
+Flask - Python web framework \
+Vercel - Hosting and deployment platform for the frontend \
+Jenkins - Continuous Integration and Deployment \
+JavaScript/HTML/CSS - Frontend technologies for a sleek UI \
 
 ### ❤️ Acknowledgements
 Vercel for hosting and deployment.
