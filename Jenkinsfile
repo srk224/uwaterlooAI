@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         VERCEL_TOKEN = credentials('VERCEL_TOKEN') // Ensure this matches the ID in Jenkins Credentials
-        PYTHON_VERSION = '3.9'
+        PYTHON_VERSION = '3'
     }
 
     stages {
