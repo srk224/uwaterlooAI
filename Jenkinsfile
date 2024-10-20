@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        VERCEL_TOKEN = credentials('VERCEL_TOKEN') // Ensure this matches the ID in Jenkins Credentials
+        VERCEL_TOKEN = credentials('VERCEL_TOKEN') 
         PYTHON_VERSION = '3'
     }
 
@@ -17,7 +17,6 @@ pipeline {
         stage('Set up Python') {
             steps {
                 echo 'Setting up Python environment...'
-                // Install Python dependencies and activate virtual environment
                 sh """
                 python${PYTHON_VERSION} -m venv venv
                 . venv/bin/activate
