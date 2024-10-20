@@ -4,7 +4,6 @@ import os
 import requests
 from dotenv import load_dotenv
 from groq import Groq
-from datetime import datetime
 
 # Load environment variables
 load_dotenv()
@@ -48,13 +47,22 @@ def get_campus_services():
     response = requests.get(url, headers=headers)
     # print(response.json())
     return response.json().get("data", []) if response.status_code == 200 else []
+    
+def get_course():
+    term_code = "1249"
+    url = f"{base_url}/Courses/{term_code}"
+    headers = {"x-api-key": "798F55DD931F4C8FB604A067E451FC57"}
+    response = requests.get(url, headers=headers)
+    # print(response.json())
+    return response.json().get("data", []) if response.status_code == 200 else []
+    
 
 # Function to query Groq LLM for decision-making
 def query_groq_llm(query):
     prompt = (
         f"You are a smart assistant for University of Waterloo students. "
         f"Based on the user's query, determine which API to call. Respond with only one of the following: "
-        f"'FoodServices', 'HolidayDates', 'News', or 'CampusServices'. User query: '{query}'"
+        f"'FoodServices', 'HolidayDates', 'News', 'Course' or 'CampusServices'. User query: '{query}'"
     )
     chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
@@ -67,7 +75,24 @@ def handle_user_query(query):
     # Step 1: Use LLM to determine the action
     action = query_groq_llm(query)
     print(action)
+    if action == "Course":
+        response_content=""
+        course = get_course()
+        for c in course:
+            name = c[('title')]
+            description = new[('itemUri')]
+            response_content += f"Title {title} with Url {description}"
 
+        prompt = (
+        f"Format the above answer {response_content} for the {query} in points.'"
+        )
+        chat_completion = client.chat.completions.create(
+        messages=[{"role": "user", "content": prompt}],
+        model="llama3-8b-8192",
+        )
+        # print(chat_completion.choices[0].message.content.strip())
+        return chat_completion.choices[0].message.content.strip()
+    
     if action == "News":
         response_content=""
         news = get_news()

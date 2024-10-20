@@ -25,7 +25,7 @@ import os
 # except requests.exceptions.RequestException as e:
 #     print(f"An error occurred: {e}")
 
-base_url = "https://openapi.data.uwaterloo.ca/v3/Wcms/latestnews/5"
+base_url = "https://openapi.data.uwaterloo.ca/v3/Courses/1249"
 def get_food_services():
     # url = f"{base_url}/Locations"
     headers = {
