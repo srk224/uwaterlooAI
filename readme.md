@@ -33,7 +33,6 @@ Here's a sneak peek of the user interface:
 ![Screenshot 2024-10-20 at 2 16 59 PM (2)](https://github.com/user-attachments/assets/a01861f3-a629-4749-98d5-a445d7109b6c)
 ![Screenshot 2024-10-20 at 2 16 25 PM (2)](https://github.com/user-attachments/assets/aecd0d60-0eb6-4f30-a6e0-43d8423db33e)
 ![Screenshot 2024-10-20 at 2 15 44 PM (2)](https://github.com/user-attachments/assets/faa3b718-a70a-4c7f-a0f0-708d787910d5)
-![Screenshot 2024-10-20 at 2 15 40 PM (2)](https://github.com/user-attachments/assets/dfa222b7-b7d7-47c6-b0bd-24051643a575)
 
 The user interface is designed to be minimal and user-friendly, allowing you to interact with UwaterlooAI effortlessly.
 
