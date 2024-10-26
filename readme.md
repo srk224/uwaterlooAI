@@ -1,4 +1,4 @@
-# 🚀 UwaterlooAI
+# 🚀 UwaterlooAI ([Link](https://uwaterlooai.vercel.app/)
 
 **UwaterlooAI** is an AI-powered assistant designed to provide seamless access to University of Waterloo's course, location, and service information. With a sleek user interface and a powerful backend, UwaterlooAI leverages modern cloud technology to deliver information in real-time. Whether you’re a student searching for dining options or looking for course schedules, UwaterlooAI has you covered!
 
@@ -8,7 +8,7 @@
 ## 🌟 Features
 
 - 🧠 **AI-Powered Responses**: Get precise answers to your queries about the University of Waterloo's services, dining options, and more.
-- 🌐 **Cloud-Integrated**: Hosted on [Vercel](https://vercel.com), making it fast, scalable, and reliable.
+- 🌐 **Cloud-Integrated**: Hosted on [Vercel](https://uwaterlooai.vercel.app/), making it fast, scalable, and reliable.
 - 📅 **Real-Time Data**: Access up-to-date course schedules, dining hours, and building locations.
 - 🎨 **User-Friendly Interface**: A modern and responsive frontend with a clean, minimalistic design.
 - ⚙️ **Fully Automated CI/CD Pipeline**: Uses Jenkins for automated testing and deployment, ensuring a smooth development workflow.
