@@ -66,7 +66,7 @@ def query_groq_llm(query):
     )
     chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model="llama3-8b-8192",
+        model="llama-3.1-70b-versatile",
     )
     return chat_completion.choices[0].message.content.strip()
 
@@ -88,7 +88,7 @@ def handle_user_query(query):
         )
         chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model="llama3-8b-8192",
+        model="llama-3.1-70b-versatile",
         )
         # print(chat_completion.choices[0].message.content.strip())
         return chat_completion.choices[0].message.content.strip()
@@ -106,7 +106,7 @@ def handle_user_query(query):
         )
         chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model="llama3-8b-8192",
+        model="llama-3.1-70b-versatile",
         )
         # print(chat_completion.choices[0].message.content.strip())
         return chat_completion.choices[0].message.content.strip()
@@ -128,7 +128,7 @@ def handle_user_query(query):
         )
         chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model="llama3-8b-8192",
+        model="llama-3.1-70b-versatile",
         )
         # print(chat_completion.choices[0].message.content.strip())
         return chat_completion.choices[0].message.content.strip()
@@ -166,7 +166,7 @@ def handle_user_query(query):
         )
         chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model="llama3-8b-8192",
+        model="llama-3.1-70b-versatile",
         )
         # print(chat_completion.choices[0].message.content.strip())
         return chat_completion.choices[0].message.content.strip()
