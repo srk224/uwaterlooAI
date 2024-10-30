@@ -20,14 +20,14 @@ base_url = "https://openapi.data.uwaterloo.ca/v3"
 # Function to get food service outlets
 def get_food_services():
     url = f"{base_url}/FoodServices/outlets"
-    headers = {"x-api-key": "798F55DD931F4C8FB604A067E451FC57"}
+    headers = {"x-api-key": waterloo_api_key}
     response = requests.get(url, headers=headers)
     # print(response.json())
     return response.json().get("data", []) if response.status_code == 200 else []
 
 def get_news():
     url = f"{base_url}/Wcms/latestnews/3"
-    headers = {"x-api-key": "798F55DD931F4C8FB604A067E451FC57"}
+    headers = {"x-api-key": waterloo_api_key}
     response = requests.get(url, headers=headers)
     # print(response.json())
     return response.json()
@@ -35,7 +35,7 @@ def get_news():
 # Function to get holiday dates
 def get_holiday_dates():
     url = f"{base_url}/HolidayDates/paidholidays/2024"
-    headers = {"x-api-key": "798F55DD931F4C8FB604A067E451FC57"}
+    headers = {"x-api-key": waterloo_api_key}
     response = requests.get(url, headers=headers)
     # print(response.json())
     return response.json()
@@ -43,7 +43,7 @@ def get_holiday_dates():
 # Function to get campus locations (e.g., gyms, counseling centers)
 def get_campus_services():
     url = f"{base_url}/Locations"
-    headers = {"x-api-key": "798F55DD931F4C8FB604A067E451FC57"}
+    headers = {"x-api-key": waterloo_api_key}
     response = requests.get(url, headers=headers)
     # print(response.json())
     return response.json().get("data", []) if response.status_code == 200 else []
@@ -51,7 +51,7 @@ def get_campus_services():
 def get_course():
     term_code = "1249"
     url = f"{base_url}/Courses/{term_code}"
-    headers = {"x-api-key": "798F55DD931F4C8FB604A067E451FC57"}
+    headers = {"x-api-key": waterloo_api_key}
     response = requests.get(url, headers=headers)
     # print(response.json())
     return response.json().get("data", []) if response.status_code == 200 else []
